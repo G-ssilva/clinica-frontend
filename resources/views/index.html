@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sora':['"Sora"'],
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    input[type=text] {
+      background-color: #C0C0BF38;
+    }
+  </style>
+</head>
+<body class="bg-[#F2E0CB] m-0 p-0">
+<div id="parent" class="flex justify-center items-center h-screen font-sora font-light text-center max-w-7xl xl:mx-40">
+  <div id="loginForm" class="h-fit min-w-[395px] flex flex-col bg-white rounded-[2rem] xl:h-3/5 xl:rounded-r-[0] xl:rounded-l-[2rem] xl:w-1/2 ">
+    <div class="justify-self-center">
+      <p class="font-extrabold text-4xl mt-16">Login</p>
+    </div>
+    <div class="mx-6">
+      <div class="flex flex-col text-xl">
+        <input class="shadow appearance-none border rounded py-2 px-3 text-[#000000] leading-tight focus:outline-none focus:shadow-outline mt-[3.2rem]" type="text" placeholder="CPF">
+        <input class="shadow appearance-none border rounded py-2 px-3 text-[#000000] leading-tight focus:outline-none focus:shadow-outline mt-[1.7rem]" type="text" placeholder="Senha">
+      </div>
+      <div class="flex flex-row items-center justify-between mt-[6rem] mb-28">
+        <button class="font-extrabold	text-xl bg-[#D4B590] text-[#FFFFFF] rounded-[0.6rem] px-4 py-2 mr-2" type="button">Acessar</button>
+        <a class="hover:text-[#D4B590] text-center text-[#95918D] ml-2">Esqueceu sua senha?</a>
+      </div>
+    </div>
+  </div>
+  <div id="confirmLogin" class="h-fit h-[365px] flex flex-col bg-white rounded-[2rem] hidden xl:rounded-r-[2rem] xl:rounded-l-[0] xl:w-1/2 xl:h-3/5">
+    <div>
+      <p class="font-extrabold text-3xl mt-24">Confirme o código SMS</p>
+    </div>
+    <div class="flex flex-row mt-12 justify-around text-4xl xl:mx-12">
+      <div>
+        <input class="shadow appearance-none border py-2 px-3 text-[#000000] leading-tight focus:outline-none focus:shadow-outline w-20 h-20 text-center" type="number" maxlength="1">
+      </div>
+      <div>
+        <input class="shadow appearance-none border py-2 px-3 text-[#000000] leading-tight focus:outline-none focus:shadow-outline w-20 h-20 text-center" type="number" maxlength="1">
+      </div>
+      <div>
+        <input class="shadow appearance-none border py-2 px-3 text-[#000000] leading-tight focus:outline-none focus:shadow-outline w-20 h-20 text-center" type="number" maxlength="1">
+      </div>
+      <div>
+        <input class="shadow appearance-none border py-2 px-3 text-[#000000] leading-tight focus:outline-none focus:shadow-outline w-20 h-20 text-center" type="number" maxlength="1">
+      </div>
+    </div>
+    <div class="flex flex-row text-xl justify-center mt-4 mx-2">
+      <div>
+        <p class="text-[#959393]">Código não chegou?</p>
+      </div>
+      <div>
+        <a class="text-[#D4B590] text-center ml-2">Reenviar código</a>
+      </div>
+    </div>
+    <div class="mt-14 justify-center">
+      <button class="font-extrabold	text-xl bg-[#D4B590] text-[#FFFFFF] rounded-[0.6rem] px-4 py-2 w-[70%]" type="button">Entrar</button>
+    </div>
+    <div class="text-[#D4B590] mt-2 justify-center mb-20">
+      <a>Voltar</a>
+    </div>
+  </div>
+  <div id="imageDiv" class="bg-[#D4B590] h-3/5 px-8 pt-4 pb-8 flex-col w-1/2 hidden xl:flex rounded-r-[2rem]">
+    <div class="flex justify-center">
+      <img class="p-6 mt-5 max-h-[230px] max-w-[428px]" src="../../img/logoGenericaClinica.png" alt="Imagem Logo Clinica">
+    </div>
+    <div>
+      <p class="text-center text-xl text-white mt-8">Olá! É um prazer receber você na área de exames da nossa clínica. Aqui você terá acesso aos seus resultados e histórico de exames realizados.</p>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  // Função para inverter as divs
+  function invertDivs() {
+    var loginForm = document.getElementById('loginForm');
+    var imageDiv = document.getElementById('imageDiv');
+    var confirmLogin = document.getElementById('confirmLogin');
+    var parentDiv = document.getElementById('parent');
+
+    // Adiciona classes de animação às divs animate__slideInRight
+    imageDiv.classList.add('animate__animated', 'animate__slideInRight');
+    loginForm.classList.add('animate__animated', 'animate__slideInLeft');
+
+    formatNewDivs(loginForm, confirmLogin, imageDiv);
+
+    parentDiv.insertBefore(imageDiv, confirmLogin);
+  }
+
+  // Funcao para esconder div de login e mudar a borda da div da imagem
+  function formatNewDivs(loginForm, confirmLogin, imageDiv){
+
+    loginForm.style.display = 'none';
+    confirmLogin.style.display = 'flex';
+
+    imageDiv.style.borderTopRightRadius = '0';
+    imageDiv.style.borderBottomRightRadius = '0';
+    imageDiv.style.borderTopLeftRadius = '2rem';
+    imageDiv.style.borderBottomLeftRadius = '2rem';
+  }
+
+  // Evento de clique no botão "Acessar"
+  var acessarButton = document.querySelector('button[type="button"]');
+  acessarButton.addEventListener('click', function() {
+    var windowWidth = window.innerWidth;
+    //if (windowWidth >= 1280) {
+    invertDivs();
+    //}
+  });
+</script>
+
+</html>

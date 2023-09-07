@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sora': ['"Sora"'],
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white">
+<div>
+  <nav class="bg-[#D4B590] fixed w-full h-24 px-10">
+    <div class="max-w-7xl flex items-center justify-between h-24 m-auto">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="../../img/logoGenericaClinica.png" alt="Logo" class="h-14">
+      </div>
+
+      <!-- Botão de Sair -->
+      <button
+        class="text-[#D4B590] bg-white py-2 px-3 rounded-lg hover:text-gray-300 flex items-center space-x-1 text-xl">
+        <span>Sair</span>
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="px-10 m-auto font-sora font-light max-w-7xl xl:px-0">
+    <div class="pt-36">
+      <p class="font-extrabold text-xl text-[#383838] md:text-3xl">Olá, Usuário, Bem Vindo(a) à sua área de exames.</p>
+    </div>
+    <div class="pt-12">
+      <p class="font-extrabold text-xl text-[#383838] md:text-3xl">Exames Dermatológicos</p>
+    </div>
+    <div class="flex flew-row gap-x-12 pt-4 overflow-x-auto">
+      <div class="bg-[#D4B590] rounded-xl min-w-[270px] h-[160px] hover:bg-[#D6A974]">
+        <div class="px-4 pt-2">
+          <p class="font-extrabold text-xl text-[#664012]">Exames</p>
+        </div>
+        <div class="px-4">
+          <p class="font-thin text-lg text-white">Mapeamento Corporal</p>
+        </div>
+        <div class="flex items-end justify-end pt-8 px-4 pb-4">
+          <i class="fa-solid fa-stethoscope" style="color: #664012; font-size:45px"></i>
+        </div>
+      </div>
+      <div class="bg-[#D4B590] rounded-xl min-w-[270px] h-[160px] hover:bg-[#D6A974]">
+        <div class="px-4 pt-2">
+          <p class="font-extrabold text-xl text-[#664012]">Exames</p>
+        </div>
+        <div class="px-4">
+          <p class="font-thin text-lg text-white">Dermatoscopia Digital</p>
+        </div>
+        <div class="flex items-end justify-end pt-8 px-4 pb-4">
+          <i class="fa-solid fa-syringe" style="color: #664012; font-size:45px"></i>
+        </div>
+      </div>
+      <div class="bg-[#D4B590] rounded-xl min-w-[270px] h-[160px] hover:bg-[#D6A974]">
+        <div class="px-4 pt-2">
+          <p class="font-extrabold text-xl text-[#664012]">Exames</p>
+        </div>
+        <div class="px-4">
+          <p class="font-thin text-lg text-white">Microscopia Confocal</p>
+        </div>
+        <div class="flex items-end justify-end pt-8 px-4 pb-4">
+          <i class="fa-solid fa-syringe" style="color: #664012; font-size:45px"></i>
+        </div>
+      </div>
+    </div>
+    <div class="pt-12">
+      <p class="font-extrabold text-xl text-[#383838] md:text-3xl">Parte Cirúrgica</p>
+    </div>
+    <div class="flex flew-row gap-x-12 pt-4 overflow-x-auto">
+      <div class="bg-[#D4B590] rounded-xl min-w-[270px] h-[160px] min-h-[160px] hover:bg-[#D6A974]">
+        <div class="px-4 pt-2">
+          <p class=" font-extrabold text-xl text-[#664012]">Exames</p>
+        </div>
+        <div class="px-4">
+          <p class="font-thin text-lg text-white pr-12">Videos Cirúrgicos</p>
+        </div>
+        <div class="flex items-end justify-end pt-8 px-4 pb-4">
+          <i class="fa-solid fa-stethoscope" style="color: #664012; font-size:45px"></i>
+        </div>
+      </div>
+      <div class="bg-[#D4B590] rounded-xl min-w-[270px] h-[160px] hover:bg-[#D6A974]">
+        <div class="px-4 pt-2">
+          <p class="font-extrabold text-xl text-[#664012]">Exames</p>
+        </div>
+        <div class="px-4">
+          <p class="font-thin text-lg text-white pr-4">Anatomia Patológica</p>
+        </div>
+        <div class="flex items-end justify-end pt-8 px-4 pb-4">
+          <i class="fa-solid fa-syringe" style="color: #664012; font-size:45px"></i>
+        </div>
+      </div>
+      <div class="bg-[#D4B590] rounded-xl min-w-[270px] h-[160px] hover:bg-[#D6A974]">
+        <div class="px-4 pt-2">
+          <p class="font-extrabold text-xl text-[#664012]">Exames</p>
+        </div>
+        <div class="px-4">
+          <p class="font-thin text-lg text-white pr-4">Planejamento Cirúrgico</p>
+        </div>
+        <div class="flex items-end justify-end pt-8 px-4 pb-4">
+          <i class="fa-solid fa-syringe" style="color: #664012; font-size:45px"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

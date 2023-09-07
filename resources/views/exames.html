@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sora': ['"Sora"'],
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+<nav class="bg-[#D4B590] fixed w-full h-24 px-10">
+  <div class="max-w-7xl flex items-center justify-between h-24 m-auto">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="../../img/logoGenericaClinica.png" alt="Logo" class="h-14">
+    </div>
+
+    <!-- Botão de Sair -->
+    <button
+      class="text-[#D4B590] bg-white py-2 px-3 rounded-lg hover:text-gray-300 flex items-center space-x-1 text-xl">
+      <span>Sair</span>
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</nav>
+<div class="px-10 m-auto font-sora font-light max-w-7xl xl:px-0">
+  <div class="pt-36">
+    <i class="fa-solid fa-stethoscope" style="color: #664012; font-size:25px" ;></i>
+    <span class="font-extrabold text-[#383838] text-2xl md:text-3xl">Exames Clínicos</span>
+  </div>
+  <div class="font-extrabold space-y-1 pt-12">
+    <div>
+      <span class="text-2xl text-[#383838] md:text-3xl">Busque seu exame</span>
+    </div>
+    <div>
+      <input
+        class="shadow appearance-none border border-2 border-[#D4B590] py-2 px-3 text-[#383838] leading-tight focus:outline-none focus:shadow-outline rounded-lg text-lg w-2/3"
+        type="text" placeholder="Nome do exame...">
+    </div>
+  </div>
+  <div class="font-semibold pt-12">
+    <span class="text-2xl text-[#383838] md:text-3xl">Exames:</span>
+  </div>
+  <div class="font-semibold pt-4 flex flex-col xl:flex-row xl:justify-between">
+    <div class="h-[125px] w-[350px] pr-2 mb-6 bg-[#D4B590] rounded-lg">
+      <div class="m-2">
+        <div class="flex items-top justify-between">
+          <div class="flex flex-col">
+            <span class="font-extrabold text-xl text-[#664012]">NOME DO EXAME</span>
+            <span class="font-thin text-lg text-white">Feito em: 10/02/2021 às 12:56</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #664012; font-size:30px;"></i>
+          </div>
+        </div>
+        <div class="flex items-center space-x-1 pt-6 pb-2">
+          <i class="fa-solid fa-circle" style="color: #00FF0A; font-size:8px"></i>
+          <span class="font-extrabold text-xl text-[#664012]">Liberado</span>
+        </div>
+      </div>
+    </div>
+    <div class="h-[125px] w-[350px] pr-2 mb-6 bg-[#D4B590] rounded-lg">
+      <div class="m-2">
+        <div class="flex items-top justify-between">
+          <div class="flex flex-col">
+            <span class="font-extrabold text-xl text-[#664012]">NOME DO EXAME</span>
+            <span class="font-thin text-lg text-white">Feito em: 10/02/2021 às 12:56</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #664012; font-size:30px;"></i>
+          </div>
+        </div>
+        <div class="flex items-center space-x-1 pt-6 pb-2">
+          <i class="fa-solid fa-circle" style="color: #FAFF00; font-size:8px"></i>
+          <span class="font-extrabold text-xl text-[#664012]">Em processo</span>
+        </div>
+      </div>
+    </div>
+    <div class="h-[125px] w-[350px] pr-2 mb-6 bg-[#D4B590] rounded-lg">
+      <div class="m-2">
+        <div class="flex items-top justify-between">
+          <div class="flex flex-col">
+            <span class="font-extrabold text-xl text-[#664012]">NOME DO EXAME</span>
+            <span class="font-thin text-lg text-white">Feito em: 10/02/2021 às 12:56</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-ellipsis-vertical" style="color: #664012; font-size:30px;"></i>
+          </div>
+        </div>
+        <div class="flex items-center space-x-1 pt-6 pb-2">
+          <i class="fa-solid fa-circle" style="color: #FF0000; font-size:8px"></i>
+          <span class="font-extrabold text-xl text-[#664012]">Problema no exame</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pb-6">
+    <button
+      class="text-[#664012] font-extrabold bg-[#D4B590] py-2 px-3 rounded-lg hover:text-gray-300 flex justify-end space-x-1 text-xl">
+      <span>Voltar</span>
+    </button>
+  </div>
+</div>
+</body>
+</html>
