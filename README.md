@@ -33,7 +33,7 @@ Imagem 2:
 
 Imagem 3:
 
-![image](https://github.com/G-ssilva/clinica-frontend/assets/85591831/764b476e-aaef-48e1-8150-57fe52f98a4f)
+![image](https://github.com/G-ssilva/clinica-frontend/assets/85591831/bede688e-906c-4604-a188-0371ce97a707)
 
 Imagem 4:
 
